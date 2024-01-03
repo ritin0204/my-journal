@@ -1,5 +1,15 @@
 import React from 'react';
-import './App.css';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Home from './pages/Home/Home';
+import Header from './layouts/Header';
+import Footer from './layouts/Footer';
+
+
+/*
+ * Importing all css in one file
+*/
+import './assests/css/App.css';
+import './assests/css/home-page.css';
 
 /**
  * App component.
@@ -7,8 +17,17 @@ import './App.css';
  */
 function App() {
   return (
-    <div className="App">
-    </div>
+    <BrowserRouter basename="/">
+      <div className="App">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,55 @@
+:root {
+    --body-bg: #ecf0f1;
+    /* Light blue-gray */
+    --header-color: #3498db;
+    /* Medium blue */
+    --primary-color: #ffffff;
+    /* White */
+    --secondary-color: #2c3e50;
+    /* Dark blue */
+    --warning-color: #ff6a00;
+    /* Adjusted warning color based on your palette */
+    --danger-color: #f02222;
+    /* Adjusted danger color based on your palette */
+    --success-color: #43ff43;
+    /* Adjusted success color based on your palette */
+    /* Font Colors */
+    --font-color-primary: #333;
+    /* Dark text */
+    --font-color-secondary: #666;
+    /* Medium dark text */
+    --font-color-tertiary: #999;
+    /* Lighter text */
+
+    /* Neutrals */
+    --black: #000000;
+    --white: #ffffff;
+    --gray-light: #ecf0f1;
+    /* Light blue-gray */
+    --gray-mid: #95a5a6;
+    /* Mid-tone blue-gray */
+    --gray-dark: #34495e;
+    /* Darker blue-gray */
+
+    /* Fonts */
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+
+    /* Font Sizes */
+    --font-size-small: 14px;
+    --font-size-medium: 18px;
+    --font-size-large: 22px;
+
+    /* Spacing */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+
+    /* Borders */
+    --border-radius-small: 4px;
+    --border-radius-medium: 8px;
+    --border-radius-large: 12px;
+
+    /* Shadows */
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
