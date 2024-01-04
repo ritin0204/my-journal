@@ -1,6 +1,5 @@
 .greeting-div h1.greeting-heading {
   letter-spacing: 2px;
-  font-family: var(--font-secondary);
 }
 .greeting-div p.greeting-text {
   position: relative;

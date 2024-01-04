@@ -6,6 +6,9 @@ import Footer from './layouts/Footer';
 import Login from './pages/Login/Login';
 import Error from './pages/Error/Error';
 import SignUp from './pages/SignUp/SignUp';
+import Activities from './pages/Activities/Activities';
+import Account from './pages/Account/Account';
+import Journal from './pages/Journal/Journal';
 import {UserContext} from './contexts/UserProvider';
 
 /*
@@ -30,7 +33,14 @@ function App() {
         <Header />
         <main>
           <Routes>
-            <Route path="/" element={user ? <Home/>:<Navigate to='/login' />} />
+            <Route path="/" element={
+              user ? <Home/> : <Navigate to="/login" />} />
+            <Route path="/account" element={
+              user ? <Account/> : <Navigate to="/login" />} />
+            <Route path="/activities" element={
+              user ? <Activities/>:<Navigate to="/login" />} />
+            <Route path="/journal" element={
+              user ? <Journal/>:<Navigate to="/login" />} />
             <Route path="/login" element={<Login/>} />
             <Route path="/signup" element={<SignUp/>} />
             <Route path="*" element={<Error />} />
