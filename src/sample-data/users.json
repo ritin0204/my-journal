@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "Id": 1,
+      "Name": "John Doe",
+      "Email": "john.doe@example.com",
+      "Username": "johndoe",
+      "password": "hashed_password_1",
+      "last_login": "2023-05-15T08:30:00",
+      "Purpose": "Researcher"
+    },
+    {
+      "Name": "Alice Smith",
+      "Email": "alice.smith@example.com",
+      "Username": "alicesmith",
+      "password": "hashed_password_2",
+      "last_login": "2023-05-16T12:45:00",
+      "Purpose": "Writer"
+    },
+    {
+      "Name": "Bob Johnson",
+      "Email": "bob.johnson@example.com",
+      "Username": "bobjohnson",
+      "password": "hashed_password_3",
+      "last_login": "2023-05-14T18:20:00",
+      "Purpose": "Developer"
+    }
+  ]
+}

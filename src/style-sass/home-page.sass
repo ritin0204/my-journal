@@ -1,3 +1,43 @@
 .home-page
   padding: 10px
   margin: 10px auto
+
+  .quote-div
+    .quote-container
+      font-size: var(--font-size-medium)
+      text-align: center
+
+      blockquote
+        font-weight: 100
+        line-height: 1.4
+        position: relative
+        width: fit-content
+        margin: 1rem auto
+
+      blockquote:before, blockquote:after
+        position: absolute
+        color: #4e4e4e73
+        font-size: 3rem
+        width: 2rem
+        height: 2rem
+        padding: 0 20px
+
+      blockquote:before 
+        content: '“'
+        left: -2.5rem
+        top: -1.5rem
+
+      blockquote:after 
+        content: '”'
+        right: -2.5rem
+        bottom: -1rem
+
+      cite 
+        line-height: 2
+
+.action-div
+  display: flex
+  justify-content: center
+  text-align: center
+  align-items: center
+  padding: 10px

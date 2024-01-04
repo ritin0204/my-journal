@@ -1,18 +1,19 @@
 :root {
-    --body-bg: #ecf0f1;
+    --body-bg: #e4e4e4;
     /* Light blue-gray */
     --header-color: #3498db;
     /* Medium blue */
-    --primary-color: #ffffff;
+    --primary-color: #fff;
     /* White */
     --secondary-color: #2c3e50;
     /* Dark blue */
-    --warning-color: #ff6a00;
+    --warning-color: #FFC107;
     /* Adjusted warning color based on your palette */
-    --danger-color: #f02222;
+    --danger-color: #DC3545;
     /* Adjusted danger color based on your palette */
-    --success-color: #43ff43;
+    --success-color: #28A745;
     /* Adjusted success color based on your palette */
+    --info-color: #17A2B8;
     /* Font Colors */
     --font-color-primary: #333;
     /* Dark text */
@@ -51,5 +52,7 @@
     --border-radius-large: 12px;
 
     /* Shadows */
-    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
+    --box-shadow: 0px 1.4px 2.8px rgba(28, 28, 28, 0.411);
+    --dark-box-shadow: 0px 1.4px 2.8px rgba(28, 28, 28, 0.7);
 }

@@ -1,28 +1,39 @@
-import React from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import React, {useContext} from 'react';
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Header from './layouts/Header';
 import Footer from './layouts/Footer';
-
+import Login from './pages/Login/Login';
+import Error from './pages/Error/Error';
+import SignUp from './pages/SignUp/SignUp';
+import {UserContext} from './contexts/UserProvider';
 
 /*
  * Importing all css in one file
 */
 import './assests/css/App.css';
 import './assests/css/home-page.css';
+import './assests/css/ui.css';
+import './assests/css/login.css';
+import './assests/css/dashboard.css';
 
 /**
  * App component.
  * @return {JSX.Element} The rendered App component.
  */
 function App() {
+  const {user} = useContext(UserContext);
+
   return (
     <BrowserRouter basename="/">
       <div className="App">
         <Header />
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={user ? <Home/>:<Navigate to='/login' />} />
+            <Route path="/login" element={<Login/>} />
+            <Route path="/signup" element={<SignUp/>} />
+            <Route path="*" element={<Error />} />
           </Routes>
         </main>
         <Footer />

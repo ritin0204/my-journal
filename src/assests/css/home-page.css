@@ -1,4 +1,46 @@
+@charset "UTF-8";
 .home-page {
   padding: 10px;
   margin: 10px auto;
+}
+.home-page .quote-div .quote-container {
+  font-size: var(--font-size-medium);
+  text-align: center;
+}
+.home-page .quote-div .quote-container blockquote {
+  font-weight: 100;
+  line-height: 1.4;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 1rem auto;
+}
+.home-page .quote-div .quote-container blockquote:before, .home-page .quote-div .quote-container blockquote:after {
+  position: absolute;
+  color: rgba(78, 78, 78, 0.4509803922);
+  font-size: 3rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0 20px;
+}
+.home-page .quote-div .quote-container blockquote:before {
+  content: "“";
+  left: -2.5rem;
+  top: -1.5rem;
+}
+.home-page .quote-div .quote-container blockquote:after {
+  content: "”";
+  right: -2.5rem;
+  bottom: -1rem;
+}
+.home-page .quote-div .quote-container cite {
+  line-height: 2;
+}
+
+.action-div {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
 }/*# sourceMappingURL=home-page.css.map */
