@@ -4,7 +4,7 @@
   margin: 10px auto;
 }
 .home-page .quote-div .quote-container {
-  font-size: var(--font-size-medium);
+  font-size: 1.18rem;
   text-align: center;
 }
 .home-page .quote-div .quote-container blockquote {
@@ -21,7 +21,7 @@
   font-size: 3rem;
   width: 2rem;
   height: 2rem;
-  padding: 0 20px;
+  padding: 0 1.2rem;
 }
 .home-page .quote-div .quote-container blockquote:before {
   content: "“";

@@ -2,7 +2,6 @@ body {
   margin: 0;
   background-color: var(--body-bg);
   font-family: var(--font-primary);
-  font-size: var(--font-size-medium);
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -15,31 +14,47 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.75em;
+  font-size: 1.75rem;
 }
 
 h4 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 h5 {
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 
 h6 {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .error-text {
   color: var(--danger-color);
+}
+
+textarea {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  max-height: 200px;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  transform: translateX(-10px);
+  border-radius: var(--border-radius-small);
+}
+
+textarea:focus {
+  outline: none;
+  border: 1px solid rgba(38, 0, 255, 0.596);
 }
 
 button {
@@ -47,7 +62,6 @@ button {
   border-radius: 18px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   font-size: var(--font-size-small);
-  transform: scale(1.1);
   margin: 10px;
   cursor: pointer;
 }

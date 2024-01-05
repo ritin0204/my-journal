@@ -45,8 +45,6 @@ const PurposeCard = () => {
         <div className='card quote-container'>
           <textarea
             ref={purposeText}
-            rows="10"
-            cols="100"
             onChange={handlePurposeChange}
             defaultValue={user.purpose}
             required
