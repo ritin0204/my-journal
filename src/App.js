@@ -9,8 +9,6 @@ import SignUp from './pages/SignUp/SignUp';
 import Activities from './pages/Activities/Activities';
 import Account from './pages/Account/Account';
 import Journal from './pages/Journal/Journal';
-import TodayJournal from './pages/Journal/TodayJournal';
-import Calender from './components/ui/Calender';
 import {UserContext} from './contexts/UserProvider';
 
 
@@ -43,11 +41,9 @@ function App() {
               user ? <Account/> : <Navigate to="/login" />} />
             <Route path="/activities" element={
               user ? <Activities/>:<Navigate to="/login" />} />
-            <Route path="/journal" element={
+            <Route path="/journals" element={
               user ? <Journal/>:<Navigate to="/login" />} />
 
-            <Route path='/journal/today' element={<TodayJournal/>} />
-            <Route path='/journal/calender' element={<Calender/>} />
             <Route path="/login" element={<Login/>} />
             <Route path="/signup" element={<SignUp/>} />
             <Route path="*" element={<Error />} />

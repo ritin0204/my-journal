@@ -28,26 +28,34 @@
     opacity: 1
     font-weight: 600
 
-  .input-div
-    display: flex
-    justify-content: center
-    flex-direction: column
-    text-align: left
+.input-div
+  display: flex
+  justify-content: center
+  flex-direction: column
+  text-align: left
 
-    label
-      font-size: var(--font-size-small)
-      font-weight: 300
-      letter-spacing: 1px
+  label
+    font-size: var(--font-size-small)
+    font-weight: 300
+    letter-spacing: 1px
 
-    input
-      padding: 6px 20px
-      margin: 8px 5px
-      border-radius: 18px
-      border: 1px solid rgba(0,0,0,0.3)
+  input
+    padding: 6px 20px
+    margin: 8px 5px
+    border-radius: 18px
+    border: 1px solid rgba(0,0,0,0.3)
 
-    input:focus
-      box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.295)
-      outline: none
+  textarea
+    padding: 6px 20px
+    margin: 8px 5px
+    width: inherit
+    transform: none
+    min-height: 200px
+    resize: none
+
+  input:focus, textarea:focus
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.295)
+    outline: none
 
 button.login-button
   background-color: var(--black)
