@@ -64,18 +64,18 @@ const Calender = () => {
       <h2>Calender</h2>
       <div className='calender'>
         <div className='calender-action'>
-          <button onClick={setPreviousMonth}>
-            Previous
+          <button className='link-button' onClick={setPreviousMonth}>
+            &lt;
           </button>
           <h6>{currentMonth.toLocaleString('default',
               {month: 'long', year: 'numeric'})}</h6>
-          <button onClick={setNextMonth}>Next</button>
+          <button className='link-button' onClick={setNextMonth}>&gt;</button>
         </div>
         <table>
           <thead>
             <tr>
-              {weekDays.map((weekday) => (
-                <th key={weekday}>{weekday}</th>
+              {weekDays.map((weekday, index) => (
+                <th className={index} key={weekday}>{weekday}</th>
               ))}
             </tr>
           </thead>
@@ -91,7 +91,7 @@ const Calender = () => {
                         className={
                           date &&
                           date.toDateString() === selectedDate.toDateString() ?
-                          'selected' : ''}>
+                          `date${idx} selected` : `date date${idx}`}>
                         {date && date.getDate()}
                       </td> : <td key={(weekidx+1)*idx}></td>
                     ))
