@@ -10,6 +10,7 @@ const tempUser = {
   'email': 'ritintiwari417@gmail.com',
   'purpose': `The purpose of life is to become 
   free from everything and do great work.`,
+  'lastLogin': '2023-05-15T08:30:00',
   'profileImageUrl': '../../sample-data/profilepic.png',
 };
 

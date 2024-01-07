@@ -60,12 +60,14 @@
 }
 
 .calender-div {
-  height: 500px;
-  min-height: 550px;
-  max-height: 550px;
+  height: 450px;
+  min-height: 450px;
+  max-height: 450px;
 }
 .calender-div h2 {
   text-align: center;
+  padding: 0;
+  margin: 0;
 }
 .calender-div .calender .calender-action {
   display: flex;
@@ -79,7 +81,7 @@
   font-size: var(--font-size-medium);
 }
 .calender-div .calender table {
-  width: 90%;
+  width: 80%;
   margin: auto;
 }
 .calender-div .calender table thead tr th {
@@ -87,15 +89,15 @@
   font-weight: 500;
   font-size: var(--font-size-small);
   opacity: 0.8;
-  scale: 1.1;
+  scale: 1;
 }
 .calender-div .calender table tbody tr td {
-  padding: 5px;
+  padding: 7px 9px;
   text-align: center;
   cursor: pointer;
   border-radius: 50%;
   font-weight: 400;
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-small);
   border: 1px solid rgba(0, 0, 0, 0);
 }
 .calender-div .calender table tbody tr td.date0, .calender-div .calender table tbody tr td.date6 {

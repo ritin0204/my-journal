@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 
-
-const Calender = () => {
+const Calender = ({selectedDate = new Date(), setSelectedDate}) => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
-  const [selectedDate, setSelectedDate] = useState(new Date());
 
   const weekDays = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
   const getDaysInMonth = (year, month) => {
@@ -104,6 +103,11 @@ const Calender = () => {
       </div>
     </div>
   );
+};
+
+Calender.propTypes = {
+  selectedDate: PropTypes.any,
+  setSelectedDate: PropTypes.any,
 };
 
 export default Calender;

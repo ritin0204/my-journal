@@ -1,7 +1,7 @@
 .journal-page .journal-main-div {
   display: grid;
   grid-template-columns: 2.2fr 1fr;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto 1fr;
   justify-content: space-evenly;
   align-content: center;
   grid-gap: 1.5rem;
@@ -17,7 +17,20 @@
 }
 
 .calender-div {
-  width: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 100%;
   max-width: 320px;
+}
+
+.view-journal {
+  min-height: 400px;
+}
+.view-journal h2 {
+  font-weight: 400;
+}
+.view-journal p.journal-description {
+  text-indent: 3rem;
+  font-size: var(--font-size-normal);
+  font-weight: 300;
 }/*# sourceMappingURL=journal-page.css.map */

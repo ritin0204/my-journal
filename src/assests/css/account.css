@@ -1,0 +1,38 @@
+.account-div .profile-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+.account-div .profile-container .profile-img-div {
+  width: 40%;
+  text-align: center;
+}
+.account-div .profile-container .profile-img-div .profile-image {
+  max-height: 220px;
+  max-width: 220px;
+  border-radius: 50%;
+  box-shadow: var(--box-shadow);
+  margin: auto;
+}
+.account-div .profile-container .user-info {
+  width: 60%;
+  padding: 0;
+}
+.account-div .profile-container .user-info h2 {
+  letter-spacing: 1px;
+}
+.account-div .profile-container .user-info .user-info-text {
+  margin-left: 30px;
+}
+.account-div .profile-container .user-info .user-info-text p {
+  font-size: var(--font-size-normal);
+  margin: 0;
+  text-indent: 10px;
+  margin-bottom: 20px;
+}
+.account-div .profile-container .user-info .user-info-text strong {
+  font-size: var(--font-size-normal);
+  font-weight: 600;
+  letter-spacing: 1px;
+}/*# sourceMappingURL=account.css.map */

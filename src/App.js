@@ -21,6 +21,7 @@ import './assests/css/ui.css';
 import './assests/css/login.css';
 import './assests/css/dashboard.css';
 import './assests/css/journal-page.css';
+import './assests/css/account.css';
 
 /**
  * App component.
