@@ -33,4 +33,20 @@
   text-indent: 3rem;
   font-size: var(--font-size-normal);
   font-weight: 300;
+}
+
+@media screen and (max-width: 425px) {
+  .journal-page {
+    margin-bottom: 50px;
+  }
+  .journal-page .journal-main-div {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+  }
+  .journal-page .journal-main-div .action-div {
+    justify-content: center;
+  }
+  .journal-page .journal-main-div .action-div button {
+    transform: scale(1);
+  }
 }/*# sourceMappingURL=journal-page.css.map */

@@ -32,3 +32,18 @@
     text-indent: 3rem
     font-size: var(--font-size-normal)
     font-weight: 300
+
+@media screen and (max-width: 425px)
+  .journal-page
+    margin-bottom: 50px
+    
+    .journal-main-div
+      grid-template-columns:1fr
+      grid-template-rows: repeat(4, auto)
+      
+      .action-div
+        justify-content: center
+
+        button
+          transform: scale(1)
+      

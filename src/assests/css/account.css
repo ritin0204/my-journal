@@ -35,4 +35,20 @@
   font-size: var(--font-size-normal);
   font-weight: 600;
   letter-spacing: 1px;
+}
+
+@media screen and (max-width: 425px) {
+  .account-div .profile-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .account-div .profile-container .profile-img-div {
+    width: 100%;
+  }
+  .account-div .profile-container .user-info {
+    width: 100%;
+  }
+  .account-div .profile-container .user-info .user-info-text {
+    margin-left: 0;
+  }
 }/*# sourceMappingURL=account.css.map */
