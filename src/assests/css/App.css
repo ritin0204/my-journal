@@ -114,6 +114,22 @@ button:active, .button:active {
   margin: 3px;
 }
 
+.close-burger {
+  display: block;
+  position: absolute;
+  transform: translateY(-5px);
+  transition: all 0.2s ease-in-out;
+}
+.close-burger :first-child {
+  transform: rotate(45deg) translateY(7px) translateX(7px);
+}
+.close-burger :nth-child(2) {
+  display: none;
+}
+.close-burger :last-child {
+  transform: rotate(-45deg);
+}
+
 .logo-div {
   padding: 5px;
   margin: 0;

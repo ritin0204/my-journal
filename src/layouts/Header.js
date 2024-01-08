@@ -4,7 +4,6 @@ import {NavLink} from 'react-router-dom';
 
 const Header = () => {
   const [showNav, setShowNav] = useState(false);
-  console.log(showNav);
   const showNavbar = () => {
     setShowNav(!showNav);
   };
@@ -27,7 +26,8 @@ const Header = () => {
           Account
         </NavLink>
       </nav>
-      <div className='burger-div' onClick={showNavbar}>
+      <div className={`burger-div ${showNav ? 'close-burger': ''}`}
+        onClick={showNavbar}>
         <div className='burger-inner-div'></div>
         <div className='burger-inner-div'></div>
         <div className='burger-inner-div'></div>

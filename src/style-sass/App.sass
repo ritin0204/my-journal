@@ -77,7 +77,6 @@ button:active, .button:active
         padding: 0 20px
         z-index: 100
 
-
 .burger-div
     display: none
     justify-content: center
@@ -98,6 +97,17 @@ button:active, .button:active
         width: 70%
         margin: 3px
     
+.close-burger
+    display: block
+    position: absolute
+    transform: translateY(-5px)
+    transition: all 0.2s ease-in-out
+    :first-child
+        transform: rotate(45deg) translateY(7px) translateX(7px)
+    :nth-child(2)
+        display: none
+    :last-child
+        transform: rotate(-45deg)
 
 .logo-div
     padding: 5px
