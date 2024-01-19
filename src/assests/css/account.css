@@ -25,19 +25,34 @@
 .account-div .profile-container .user-info .user-info-text {
   margin-left: 30px;
 }
-.account-div .profile-container .user-info .user-info-text p {
-  font-size: var(--font-size-normal);
-  margin: 0;
-  text-indent: 10px;
-  margin-bottom: 20px;
-}
 .account-div .profile-container .user-info .user-info-text strong {
   font-size: var(--font-size-normal);
   font-weight: 600;
   letter-spacing: 1px;
 }
+.account-div .profile-container .user-info .user-info-text input, .account-div .profile-container .user-info .user-info-text p {
+  margin: 0;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(78, 78, 78, 0.4509803922);
+  padding: 10px 0;
+  margin-bottom: 20px;
+  font-size: var(--font-size-normal);
+  letter-spacing: 1px;
+}
+.account-div .profile-container .user-info .user-info-text input:focus, .account-div .profile-container .user-info .user-info-text p:focus {
+  border-bottom: 1px solid #4e4e4e;
+}
+.account-div .profile-container .user-info .user-info-text input:focus, .account-div .profile-container .user-info .user-info-text p:focus {
+  outline: none;
+}
+.account-div .profile-container .user-info .user-info-text label {
+  font-size: var(--font-size-normal);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .account-div .profile-container {
     flex-direction: column;
     justify-content: center;

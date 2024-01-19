@@ -30,12 +30,12 @@ const Journal = () => {
       <Greeting greetingHeading={journalGreeting.greetingHeading}
         greetingText={journalGreeting.greetingText} />
       <div className='journal-main-div'>
+        <Calender selectedDate={selectedDate}
+          setSelectedDate={setSelectedDate}/>
         {
           journal ? <ViewJournal journal={journal} />:
           <JournalForm />
         }
-        <Calender selectedDate={selectedDate}
-          setSelectedDate={setSelectedDate}/>
       </div>
       <div>
         <Link to='/journals/all' className='button link-button'>

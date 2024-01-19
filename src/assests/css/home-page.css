@@ -7,6 +7,9 @@
   font-size: 1.18rem;
   text-align: center;
 }
+.home-page .quote-div .quote-container textarea {
+  min-height: 200px;
+}
 .home-page .quote-div .quote-container blockquote {
   font-weight: 100;
   line-height: 1.4;

@@ -22,17 +22,29 @@
         letter-spacing: 1px
       .user-info-text
         margin-left: 30px
-        p
-          font-size: var(--font-size-normal)
-          margin: 0
-          text-indent: 10px
-          margin-bottom: 20px
         strong
           font-size: var(--font-size-normal)
           font-weight: 600
           letter-spacing: 1px
+        input, p
+          margin: 0
+          width: 100%
+          border: none
+          border-bottom: 1px solid #4e4e4e73
+          padding: 10px 0
+          margin-bottom: 20px
+          font-size: var(--font-size-normal)
+          letter-spacing: 1px
+          &:focus
+            border-bottom: 1px solid #4e4e4e
+          &:focus
+            outline: none
+        label
+          font-size: var(--font-size-normal)
+          font-weight: 600
+          letter-spacing: 1px
 
-@media screen and (max-width:425px)
+@media screen and (max-width:768px)
   .account-div
     .profile-container
       flex-direction: column
