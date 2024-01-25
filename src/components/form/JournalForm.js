@@ -1,7 +1,4 @@
 import React, {useState} from 'react';
-// import journals from '../../sample-data/Journals.json';
-
-// const journalList = journals['journals'];
 
 const JournalForm = () => {
   const [error, setError] = useState('');
@@ -28,7 +25,7 @@ const JournalForm = () => {
       setError('');
       console.log('Dats Added successfully');
 
-      // Don't let users databe gone if it's not saved in
+      // Don't let users data be gone if it's not saved in
       // database due to some error
       // so make sure to store it in local storage
       e.target.reset();
