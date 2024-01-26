@@ -8,7 +8,7 @@ const tempUser = {
   'lastName': 'Tiwari',
   'username': 'ritin0204',
   'email': 'ritintiwari417@gmail.com',
-  'purpose': `The purpose of life is to become 
+  'purpose': `The purpose of life is to become
   free from everything and do great work.`,
   'lastLogin': '2023-05-15T08:30:00',
   'profileImageUrl': '../../sample-data/profilepic.png',
@@ -16,7 +16,7 @@ const tempUser = {
 
 // Create a provider component
 const UserProvider = ({children}) => {
-  const [user, setUser] = useState(tempUser);
+  const [user, setUser] = useState(null);
 
   const loginUser = (userData=tempUser) => {
     setUser(userData);

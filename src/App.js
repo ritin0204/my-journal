@@ -35,10 +35,13 @@ function App() {
     <BrowserRouter basename="/">
       <div className="App">
         <Header />
+        {
+          user ? null : <Navigate to="/login" />
+        }
         <main>
           <Routes>
             <Route path="/" element={
-              user ? <Home/> : <Navigate to="/login" />} />
+              user !== null ? <Home/> : <Navigate to="/login" />} />
             <Route path="/account" element={
               user ? <Account/> : <Navigate to="/login" />} />
             <Route path="/activities" element={
