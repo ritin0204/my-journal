@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react';
 import {UserContext} from '../../contexts/UserProvider';
-
+import {createUser} from '../../services/userApi';
 
 const SignUpForm = () => {
   const {loginUser} = useContext(UserContext);
@@ -8,6 +8,7 @@ const SignUpForm = () => {
     email: '',
     username: '',
     password: '',
+    confirmPassword: '',
   });
 
   const [error, setError] = useState('');
@@ -22,9 +23,13 @@ const SignUpForm = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    if (tempUser.username === 'demo' && tempUser.password === 'password') {
+    if (tempUser.password === tempUser.confirmPassword) {
+      createUser(tempUser);
+    } else {
+      setError('Both Password must be same!');
+    }
+    if (tempUser) {
       loginUser();
-      console.log('Login successful');
     } else {
       setError('Incorrect username or password');
     }
@@ -74,8 +79,8 @@ const SignUpForm = () => {
           <label htmlFor="confirm-password">Confirm Password:</label>
           <input
             type="password"
-            id="confirm-password"
-            name="confirm-password"
+            id="confirmPassword"
+            name="confirmPassword"
             placeholder="confirm password"
             value={tempUser.confirmPassword}
             onChange={handleInputChange}

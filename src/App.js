@@ -35,9 +35,6 @@ function App() {
     <BrowserRouter basename="/">
       <div className="App">
         <Header />
-        {
-          user ? null : <Navigate to="/login" />
-        }
         <main>
           <Routes>
             <Route path="/" element={

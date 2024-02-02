@@ -2,6 +2,7 @@ import React, {useContext, useState} from 'react';
 import {UserContext} from '../../contexts/UserProvider';
 import {getTokens} from '../../services/authApis';
 
+
 const LoginForm = () => {
   const {loginUser} = useContext(UserContext);
   const [tempUser, setTempUser] = useState({
@@ -22,8 +23,7 @@ const LoginForm = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     getTokens(tempUser).then((res) => {
-      console.log(res);
-      loginUser();
+      loginUser(tempUser.username);
     }).catch((err) => {
       setError(err.message);
     });

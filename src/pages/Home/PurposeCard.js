@@ -1,6 +1,7 @@
 import React, {useContext, useRef, useState} from 'react';
 import {UserContext} from '../../contexts/UserProvider';
 import EmptyCard from '../../components/ui/EmptyCard';
+import {updateUser} from '../../services/userApi';
 
 const PurposeCard = () => {
   const {user} = useContext(UserContext);
@@ -20,8 +21,13 @@ const PurposeCard = () => {
       setError('Purpose can not be empty.');
     } else {
       user.purpose = purposeChanged;
-      setEditState(!editState);
-      setPurpose(purposeChanged);
+      updateUser(user)
+          .then((res) => {
+            setEditState(!editState);
+            setPurpose(purposeChanged);
+          }).catch((err) => {
+            setError(err.message);
+          });
     }
   };
 

@@ -1,8 +1,5 @@
 import baseApi from './baseApi';
-import {setCookie} from '../utils/cookies';
-
-const ACCESS_TOKEN_TIMEOUT = 5; // Minutes
-const REFRESH_TOKEN_TIMEOUT = 360; // Minutes
+import Cookies from 'js-cookie';
 
 
 /**
@@ -15,35 +12,34 @@ async function getTokens(credentials) {
     const response = await baseApi.post('/token/', credentials);
     if (response.status === 200) {
       const {refresh, access} = response.data;
-      setCookie('access_token', access, ACCESS_TOKEN_TIMEOUT);
-      setCookie('refresh_token', refresh, REFRESH_TOKEN_TIMEOUT);
+      Cookies.set('_currentUsername', credentials.username);
+      Cookies.set('accessToken', access);
+      Cookies.set('refreshToken', refresh);
       return response.data;
     } else {
       throw new Error('Sommthing went wrong! ' + response.status);
     }
   } catch (error) {
-    throw new Error('Invalid username or password!');
+    throw new Error(error.messege);
   }
 }
-
 
 /**
  * Function to get the access token using the refresh token
  * @param {string} refreshToken - refresh token
  * @return {Promise<void>}
  */
-async function getAccessToken(refreshToken) {
+async function getAccessToken() {
+  const refreshToken = Cookies.get('refreshToken');
   try {
-    const response =await baseApi.post('/token/refresh/', {
+    const response = await baseApi.post('/token/refresh/', {
       'refresh': refreshToken,
     });
-    setCookie(
-        'access_token',
-        response.data['access'],
-        ACCESS_TOKEN_TIMEOUT,
-    );
+    Cookies.set('accessToken', response.data['access']);
+    return response.data['access'];
   } catch (error) {
-    console.log(error);
+    removeTokens();
+    return null;
   }
 }
 
@@ -52,8 +48,9 @@ async function getAccessToken(refreshToken) {
  * Removes the access and refresh tokens from local storage
  */
 async function removeTokens() {
-  setCookie('access_token', '', -1);
-  setCookie('refresh_token', '', -1);
+  Cookies.remove('accessToken');
+  Cookies.remove('refreshToken');
+  Cookies.remove('_currentUsername');
 }
 
 export {getTokens, getAccessToken, removeTokens};

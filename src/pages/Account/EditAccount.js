@@ -10,7 +10,12 @@ const EditAccount = ({changeEdit}) => {
     <div>
       <form className="card profile-container">
         <div className='profile-img-div'>
-          <img src={profileImg} alt="Profile Image" className="profile-image" />
+          <img src={
+            user.image ? user.image :
+            profileImg
+          }
+          alt="Profile Image"
+          className="profile-image" />
         </div>
         <div className="user-info">
           <h2>Edit Profile</h2>
